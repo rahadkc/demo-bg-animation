@@ -1,0 +1,2 @@
+export const ALL_INSURANCE = "ALL_INSURANCE";
+export const SINGLE_INSURANCE = "SINGLE_INSURANCE";

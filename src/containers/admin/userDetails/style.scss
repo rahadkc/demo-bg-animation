@@ -1,0 +1,64 @@
+@import '../../../assets/css/mixins.scss';
+
+.IPaddress{
+    margin-bottom: 40px;
+    .address{
+        font-weight: 700;
+        font-size: 22px;
+        display: inline-block;
+    }
+    .edit,
+    .savebtn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 22px;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        img{
+            margin-left: 15px;
+        }
+    }
+    .savebtn{
+        color: #7ADBD1;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.inputStyle{
+    &.editField{
+        label{
+            color: $purple_1;
+        }
+    }
+}
+
+.actionsBtns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    li{
+        width: calc(50% - 10px);
+        button{
+            min-height: 45px;
+            min-width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: $textColor;
+            color: #fff;
+            border: 2px solid $textColor;
+            border-radius: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            &.delete{
+                background: #E26262;
+                border-color: #E26262;
+            }
+        }
+    }
+}

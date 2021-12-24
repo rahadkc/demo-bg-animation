@@ -1,0 +1,415 @@
+@import '../../assets/css/mixins.scss';
+
+.myPremiumAccountArea {
+  .myAccount_content_wrapper {
+    padding: 150px 20px 180px 20px;
+    max-width: 693px;
+    margin: 0 auto;
+    @media only screen and(max-width: 1024px) {
+      padding: 40px 20px 100px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      h1 {
+        font-size: 40px !important;
+        line-height: 50px;
+      }
+    }
+    @media only screen and(max-width: 665px) {
+      padding: 30px 20px 100px 20px;
+      h1 {
+        font-size: 34px !important;
+        line-height: 49px;
+      }
+    }
+
+    h1 {
+      font-size: 48px !important;
+      line-height: 66px;
+      color: #071446;
+      //margin-bottom: 80px;
+    }
+
+    .accountHub {
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+
+    .accountSubtitle {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      line-height: 21px;
+      margin-bottom: 15px;
+    }
+
+    .accountInfo {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+
+    .myaccount__password {
+      margin-bottom: 2rem;
+
+      label {
+        display: block;
+        font-family: 'NeuzeitGro', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+        color: #777def;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0;
+        border-bottom: 1px solid #777def;
+
+        input {
+          flex: 1;
+          height: 45px;
+          width: 100%;
+          border: none;
+          color: #a4aac1;
+          transition: all 0.4s ease-in-out 0s;
+          font-size: 16px;
+          font-family: 'NeuzeitGro', sans-serif;
+          font-weight: 500;
+          background: transparent;
+        }
+
+        button {
+          cursor: pointer;
+          color: #a4aac1;
+          font-weight: 400;
+          font-size: 16px;
+          background: transparent;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.myPremiumAccountMainContainer {
+  max-width: 100%;
+  margin: auto;
+
+  .myAccount_sidebar {
+    width: 480px;
+    flex-basis: 480px;
+    flex-shrink: 0;
+    background: #ebfaff;
+    padding: 150px 86px;
+
+    @media only screen and(max-width: 1250px) {
+      width: 400px;
+      flex-basis: 400px;
+    }
+
+    @media only screen and(max-width: 1100px) {
+      width: 300px;
+      flex-basis: 300px;
+      flex-shrink: 0;
+      background: #ebfaff;
+      padding: 150px 70px;
+    }
+
+    @media only screen and(max-width: 1024px) {
+      position: sticky;
+      top: 0;
+      height: auto;
+      z-index: 99999999;
+      width: 100%;
+      flex-basis: 100%;
+      padding: 20px 20px;
+
+      ul {
+        gap: 10px 30px;
+        flex-wrap: wrap;
+        top: 0;
+        display: flex;
+
+        li {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    @media only screen and(max-width: 665px) {
+      ul {
+        gap: 8px 20px;
+
+        li {
+          font-size: 16px !important;
+        }
+      }
+
+    }
+
+    ul {
+      top: 100px;
+      position: sticky;
+
+      li {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+        cursor: pointer;
+
+        .activeItem {
+          color: #777def;
+        }
+      }
+    }
+  }
+}
+
+.myPremiumAccountContainer {
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  @media only screen and(max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.accountTitle {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 66px;
+  margin-bottom: 100px;
+  @media (max-width: 991px) {
+    font-size: 50px;
+    line-height: 46px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: 767px) {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.accountSubTitle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  margin-bottom: 35px;
+  @media (max-width: 767px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .editbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    font-weight: 700;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    color: #7adbd1;
+    background: transparent;
+    border: none;
+    font-weight: 700;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+}
+
+.accountCard {
+  background: #ffffff;
+  box-shadow: 0 0 24px #ebfaff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li {
+    min-width: 105px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7adbd1;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    color: #fff;
+    padding: 3px 20px;
+  }
+}
+
+.profileImg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  line-height: 0;
+  z-index: 1;
+  @media (max-width: 1300px) {
+    margin-bottom: 25px;
+  }
+
+  .inputFile {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: $textColor;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    img {
+      z-index: 12;
+    }
+
+    input {
+      position: absolute;
+      left: -25000px;
+      opacity: 0;
+    }
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 11;
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.modal-dialog {
+  &.accountModalWrap {
+    max-width: 600px;
+  }
+}
+
+.accountForm {
+  padding: 30px;
+}
+
+.accountModalTitle {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: $mainfontfamily;
+  font-weight: 700;
+}
+
+// subscription tab
+.mysubscription {
+  margin-bottom: 50px;
+
+  .mysubscription_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    p {
+      font-size: 1.35rem;
+      margin: 0;
+    }
+
+    a {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+
+      img {
+        margin-bottom: 5px;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .mysubscription__card {
+    background: white;
+    box-shadow: 0 0 20px 0 #e4edf48a;
+    border-radius: 20px;
+    padding: 2rem;
+
+    .mysubscription__top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #80808019;
+
+      .subscription__title {
+        font-size: 2.5rem;
+      }
+
+      div {
+        &:last-child {
+          display: flex;
+
+          span {
+            color: rgba(128, 128, 128, 0.609);
+          }
+        }
+      }
+    }
+
+    .mysubscription__bottom {
+      ul {
+        li {
+          font-weight: 400 !important;
+          font-size: 1rem !important;
+          list-style: disc;
+          margin-bottom: 1rem !important;
+        }
+      }
+
+      margin-top: 2rem;
+    }
+  }
+}
+
+.paymentmethod {
+  margin-bottom: 50px;
+
+  .paymentmethod__card {
+    .noticemessage {
+      margin-bottom: 0.8rem;
+
+      .inputStyle {
+        margin-bottom: 0.5rem !important;
+      }
+
+      small {
+        color: #ff7b7b;
+      }
+    }
+  }
+}

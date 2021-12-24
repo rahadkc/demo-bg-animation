@@ -1,0 +1,24 @@
+<svg width="395" height="395" viewBox="0 0 395 395" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 20C0 8.9543 8.9543 0 20 0H375C386.046 0 395 8.9543 395 20V395H0V20Z" fill="white"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="395" height="395">
+<path d="M0 20C0 8.9543 8.9543 0 20 0H375C386.046 0 395 8.9543 395 20V395H0V20Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<circle cx="65" cy="419.005" r="25" fill="#EBFAFF"/>
+<circle cx="65" cy="279.005" r="25" fill="#EBFAFF"/>
+<path d="M54.5391 279.79L56.7941 276.894L62.8194 281.862L72.7208 271.005L75.4629 273.463L63.2035 287.005L54.5391 279.79Z" fill="white"/>
+<circle cx="65" cy="349.005" r="25" fill="#EBFAFF"/>
+<path d="M54.5391 349.79L56.7941 346.894L62.8194 351.862L72.7208 341.005L75.4629 343.463L63.2035 357.005L54.5391 349.79Z" fill="white"/>
+<rect x="110" y="256.505" width="224" height="10" fill="#EBFAFF"/>
+<rect x="110" y="276.505" width="192" height="5" fill="#EBFAFF"/>
+<rect x="110" y="286.505" width="202.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="296.505" width="186.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="326.505" width="224" height="10" fill="#EBFAFF"/>
+<rect x="110" y="346.505" width="192" height="5" fill="#EBFAFF"/>
+<rect x="110" y="356.505" width="202.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="366.505" width="186.5" height="5" fill="#EBFAFF"/>
+<path d="M40 50.7949C40 45.2721 44.4772 40.7949 50 40.7949H345C350.523 40.7949 355 45.2721 355 50.7949V217.982H40V50.7949Z" fill="#EBFAFF"/>
+<circle cx="197.5" cy="129.389" r="25" fill="white"/>
+<path d="M207.5 129.389L192.5 138.049L192.5 120.728L207.5 129.389Z" fill="#071446"/>
+</g>
+</svg>

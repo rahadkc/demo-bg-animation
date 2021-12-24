@@ -1,0 +1,100 @@
+@import '../../assets/css/mixins.scss';
+
+.confirmPremiumEmailArea {
+	padding: 190px 20px 170px;
+	@media (max-width: 1300px) {
+		padding: 170px 15px 100px;
+	}
+}
+.confirmPremiumEmailWrap {
+	// background-image: url('../../assets/images/bg/confirm_premium_bg.png');
+	max-width: 850px;
+	margin: auto;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 20px 20px 0px 0px;
+	padding: 100px 150px 85px 80px;
+	border-bottom: 10px solid #7adbd1;
+	@media (max-width: 991px) {
+		padding: 70px 80px 70px 50px;
+	}
+	@media (max-width: 767px) {
+		padding: 50px 25px;
+	}
+	.confirmPremiumShape {
+		position: absolute;
+		right: -120px;
+		top: 103px;
+		z-index: -1;
+		@media (max-width: 767px) {
+			opacity: 0.8;
+			right: -50px;
+			height: 100px;
+		}
+	}
+	h1 {
+		font-size: 90px;
+		line-height: 99px;
+		letter-spacing: 0.1em;
+		color: #fff;
+		width: 60%;
+		font-family: $mainfontfamily;
+		font-weight: 700;
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			width: 60%;
+		}
+		@media (max-width: 767px) {
+			width: 145px;
+			font-size: 40px;
+			line-height: 45px;
+			margin-bottom: 30px;
+		}
+	}
+	p {
+		font-size: 16px;
+		color: #fff;
+		line-height: 24px;
+		width: 50%;
+		margin-bottom: 120px;
+		@media (max-width: 991px) {
+			margin-bottom: 80px;
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 50px;
+			width: 90%;
+			margin-bottom: 40px;
+		}
+	}
+	.resendPremiumEmail {
+		display: flex;
+		align-items: center;
+		color: #fff;
+		font-size: 22px;
+		line-height: 28px;
+		@media (max-width: 767px) {
+			font-size: 14px;
+			line-height: 20px;
+		}
+		strong {
+			display: flex;
+			align-items: center;
+			margin-left: 20px;
+			cursor: pointer;
+			transition: all 0.4s ease-in-out 0s;
+			@media (max-width: 767px) {
+				margin-left: 10px;
+			}
+			&:hover {
+				opacity: 0.9;
+			}
+			img {
+				margin-left: 15px;
+				@media (max-width: 767px) {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.passwordAccountCard {
+  background: #ffffff;
+  box-shadow: 0px 0px 24px #ebfaff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  @media (max-width: 767px) {
+    padding: 30px 15px;
+  }
+}
+
+.modal {
+  .modal-dialog {
+    max-width: 65%;
+    margin: 1.75rem auto;
+
+    .blackListModal--premium {
+      .modal-content {
+        padding: 50px 0 !important;
+        padding-left: 50px !important;
+        display: none !important;
+      }
+    }
+  }
+}
+
+.password__modal {
+  .updatebutton {
+    background: #787fef;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    height: 45px;
+    width: 202px;
+    margin: auto;
+  }
+}

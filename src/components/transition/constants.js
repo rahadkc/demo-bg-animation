@@ -1,0 +1,14 @@
+export const SET_OFFSET_TOP = "SET_OFFSET_TOP";
+export const SET_OFFSET_TOP_LIST = "SET_OFFSET_TOP_LIST";
+export const UPDATE_OFFSET_TOP_LIST = "UPDATE_OFFSET_TOP_LIST";
+export const SET_IN_VIEW = "SET_IN_VIEW";
+export const GET_IN_VIEW = "GET_IN_VIEW";
+export const SEC_ONE = 'SEC_ONE';
+export const SEC_TWO = 'SEC_TWO';
+export const SEC_THREE = 'SEC_THREE';
+export const SEC_FOUR = 'SEC_FOUR';
+export const SEC_FIVE = 'SEC_FIVE';
+export const SEC_SIX = 'SEC_SIX';
+export const SEC_SEVEN = 'SEC_SEVEN';
+export const SEC_EIGHT = 'SEC_EIGHT';
+export const SEC_NINE = 'SEC_NINE';

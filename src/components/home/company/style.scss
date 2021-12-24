@@ -1,0 +1,213 @@
+@import '../../../assets/css/mixins.scss';
+.companyArea {
+	padding: 170px 20px;
+	// background: linear-gradient(0deg, #ebfaff, #ebfaff); commented by rahad
+    @media (max-width: 991px) {
+        padding: 80px 20px;
+    }
+    @media (max-width: 767px) {
+        padding: 50px 20px 60px;
+        position: relative;
+        z-index: 1;
+        background: transparent;
+        &::before{
+            position: absolute;
+            width: 100%;
+            max-height: 275px;
+            height: 100%;
+            content: "";
+	        background: linear-gradient(0deg, #ebfaff, #ebfaff);
+            z-index: -1;
+            top: 0;
+            left: 0;
+
+        }
+    }
+}
+.companyContainer{
+    max-width: 1360px;
+    margin: auto;
+}
+.companyContent {
+	max-width: 700px;
+	margin-left: auto;
+	@media (max-width: 1300px) {
+		max-width: 555px;
+	}
+	@media (max-width: 991px) {
+		max-width: 580px;
+	}
+	@media (max-width: 767px) {
+		margin-left: 0;
+		max-width: 100%;
+	}
+	h2 {
+		font-size: 90px;
+		font-family: $mainfontfamily;
+		font-weight: 700;
+		line-height: 99px;
+		margin-bottom: 40px;
+		@media (max-width: 1300px) {
+			font-size: 60px;
+			line-height: 65px;
+			margin-bottom: 25px;
+		}
+		@media (max-width: 991px) {
+			font-size: 40px;
+			line-height: 45px;
+		}
+		@media (max-width: 767px) {
+			font-size: 28px;
+			line-height: 30px;
+            margin-bottom: 20px;
+		}
+	}
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 40px;
+		max-width: 90%;
+		@media (max-width: 1300px) {
+			margin-bottom: 20px;
+			max-width: 95%;
+		}
+        @media (max-width: 767px) {
+			font-size: 14px;
+			line-height: 21px;
+            margin-bottom: 30px;
+		}
+	}
+}
+.companyitems {
+	margin-top: 265px; 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@media (max-width: 991px) {
+		justify-content: flex-start;
+		margin-top: 450px;
+	}
+	@media (max-width: 767px) {
+		margin-top: 0;
+        display: none;
+	}
+	li {
+		width: calc(20% - 20px);
+		margin-right: 20px;
+		@media (max-width: 991px) {
+			width: calc(33.33% - 20px);
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+			margin-top: 30px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&.companyWrap1 {
+			// margin-top: -500px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		&.companyWrap2 {
+			// margin-top: -375px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		&.companyWrap3 {
+			// margin-top: -250px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		&.companyWrap4 {
+			// margin-top: -125px;
+			@media (max-width: 767px) {
+				margin-top: 30px;
+			}
+		}
+		.companyImg {
+			display: inline-block;
+			background: #fff;
+			border-radius: 50%;
+			margin-bottom: 25px;
+			img {
+				height: 110px;
+				width: 110px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 25px;
+		}
+		strong {
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: $mainfontfamily;
+
+			.subName {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+
+.companySlider{
+    margin-top: 120px;
+    .slick-arrow{
+        position: absolute;
+        bottom: 0px;
+        z-index: 11;
+        &.slick-prev{
+            left: 43%;
+        }
+        &.slick-next{
+            right: 43%;
+        }
+    }
+    .companyWrap{
+        text-align: center;
+        margin-bottom: 25px;
+        .companyImg {
+			display: inline-block;
+			background: #fff;
+			border-radius: 50%;
+			margin-bottom: 25px;
+			img {
+				height: 110px;
+				width: 110px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 25px;
+            
+		}
+		strong {
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-family: $mainfontfamily;
+            font-size: 14px;
+			.subName {
+				font-weight: 400;
+			}
+		}
+    }
+}
+.d-desktop-none {
+	display: none;
+	@media (max-width: 767px) {
+		display: block;
+	}
+}

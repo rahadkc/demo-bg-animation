@@ -1,0 +1,118 @@
+@import "../../assets/css/mixins.scss";
+
+.loginArea {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 767px) {
+        padding: 50px 20px 100px;
+    }
+}
+
+.loginForm {
+    max-width: 670px;
+    width: 100%;
+}
+
+.accountCard {
+    background: #ffffff;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+        padding: 30px 20px;
+    }
+}
+
+.loginTitle {
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 99px;
+    font-family: $mainfontfamily;
+    color: #fff;
+    margin-bottom: 25px;
+    @media (max-width: 1620px) {
+        font-size: 80px;
+        line-height: 79px;
+    }
+    @media (max-width: 767px) {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+}
+
+.loginContent {
+    color: #fff;
+    margin-bottom: 40px;
+    @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 30px;
+    }
+}
+
+.loginForm {
+    .inputStyle {
+        margin-bottom: 25px;
+        input,
+        select {
+            height: 35px;
+            color: $textColor;
+            border-radius: 0;
+            &::placeholder {
+                color: $textColor;
+            }
+        }
+    }
+}
+
+.inputStyle {
+    .withIcon {
+        position: relative;
+        margin-bottom: 0;
+        .password_icon img {
+            width: 23px;
+            right: -1px;
+        }
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            width: 20px;
+            object-fit: contain;
+            height: 23px;
+        }
+    }
+}
+
+.loginBtn {
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+    transition: all 0.4s ease-in-out 0s;
+    @media (max-width: 767px) {
+        font-size: 16px;
+    }
+    &:hover {
+        opacity: 0.9;
+    }
+    img {
+        margin-left: 15px;
+    }
+}
+
+.forgotPassword {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #fff;
+}

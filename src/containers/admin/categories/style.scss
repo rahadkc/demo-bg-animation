@@ -1,0 +1,30 @@
+@import '../../../assets/css/mixins.scss';
+
+.uploadIcons {
+  .fileImage {
+    position: relative;
+    border: 2px dashed $purple_1;
+    padding: 20px;
+    border-radius: 20px;
+
+    img {
+      height: 150px;
+      width: 100%;
+      object-fit: contain;
+
+    }
+
+  }
+
+  .inputFileBtn {
+    min-height: 150px;
+  }
+}
+
+.categoryIcon {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+

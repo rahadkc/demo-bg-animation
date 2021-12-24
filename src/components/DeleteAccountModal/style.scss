@@ -1,0 +1,20 @@
+.delete_modal {
+    .modal-dialog {
+        max-width: 690px !important;
+    }
+    p {
+        font-size: 16px;
+        line-height: 150%;
+        /* or 24px */
+        font-weight: normal;
+        color: #071446;
+        margin-top: 22px;
+    }
+
+    button{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-top: 80px;
+    }
+}

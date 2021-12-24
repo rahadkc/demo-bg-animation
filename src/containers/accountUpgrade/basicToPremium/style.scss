@@ -1,0 +1,36 @@
+.premium_container {
+  h2 {
+    font-size: 70px;
+    line-height: 77px;
+    max-width: 500px;
+    margin-bottom: 90px;
+    color: white;
+  }
+
+  p {
+    max-width: 200px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 16px;
+
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .successWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .confirmShape {
+    top: 80px;
+    bottom: auto;
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 40px;
+      line-height: 44px;
+    }
+  }
+}

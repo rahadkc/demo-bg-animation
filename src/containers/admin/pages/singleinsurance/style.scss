@@ -1,0 +1,70 @@
+@import "../../../../assets/css/mixins.scss";
+
+.imageinput {
+  height: 100% !important;
+}
+
+.singleinsurancestatus {
+  max-width: 287.75px;
+
+  .inputStyle {
+    margin-bottom: 51px !important;
+
+    label {
+      font-size: 22px !important;
+      font-weight: normal !important;
+    }
+  }
+}
+
+.action__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 21.5px;
+  width: 675px;
+  margin: 0 auto;
+
+  button {
+    // width: 326px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: inherit;
+    padding-top: 5px;
+    cursor: pointer;
+
+    &:first-child {
+      background: #7adbd1;
+    }
+
+    //&:last-child {
+    //  background: #e26262;
+    //}
+  }
+}
+
+.titleBoxWrap {
+  .view {
+    margin-top: 60px;
+    display: block;
+    margin-bottom: 47.87px;
+  }
+}
+
+
+.edit-tier-buttons {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+
+  .savebtn {
+    align-items: flex-start;
+  }
+
+  .savebtn.delete {
+    color: #e26262;
+  }
+}

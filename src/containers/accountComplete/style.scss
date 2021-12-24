@@ -1,0 +1,231 @@
+@import "../../assets/css/mixins.scss";
+
+.accountCompleteWrap {
+  overflow: hidden;
+}
+
+.nextPrevBtn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  &.nextBtn {
+    img {
+      margin-left: 10px;
+    }
+  }
+  &.prevBtn {
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+.switchWrap {
+  padding-right: 40px;
+}
+.switchLabel {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 767px) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+}
+.errorMsg {
+  background: rgba(176, 0, 32, 0.1);
+  color: #b00020;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 3px 10px;
+  margin: auto auto 20px;
+}
+.skipBtn {
+  position: absolute;
+  right: 35px;
+  bottom: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  img {
+    height: 30px;
+  }
+}
+
+.uploadImageBtn {
+  height: 190px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 50px;
+  &.imageRemove {
+    display: none;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .inputFile {
+    position: absolute;
+    right: 20px;
+    bottom: 19px;
+    background: $textColor;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 0;
+    img {
+      z-index: 12;
+    }
+    input {
+      position: absolute;
+      left: -25000px;
+      opacity: 0;
+    }
+  }
+}
+
+.uploadthumbImg {
+  margin: auto;
+  height: 190px;
+  width: 190px;
+  margin-bottom: 50px;
+  position: relative;
+  display: block;
+  .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .inputFile {
+    position: absolute;
+    right: 1px;
+    bottom: 10px;
+    background: $textColor;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 0;
+    img {
+      z-index: 12;
+    }
+  }
+}
+.removeImage {
+  display: none;
+}
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  li {
+    min-height: 40px;
+    min-width: 100px;
+    background: #7adbd1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 4px 15px;
+    text-transform: capitalize;
+    .delete {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
+
+.youDidWrap {
+  position: relative;
+  flex-wrap: wrap;
+  h2 {
+    font-size: 8rem;
+    font-family: $mainfontfamily;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 176px;
+    color: #fff;
+    @media (max-width: 767px) {
+      font-size: 50px;
+      line-height: 59px;
+    }
+    span {
+      display: block;
+      margin-bottom: 30px;
+      @media (max-width: 991px) {
+        margin-bottom: 15px;
+      }
+      &:nth-child(2) {
+        margin-left: 215px;
+        @media (max-width: 991px) {
+          margin-left: 150px;
+        }
+        @media (max-width: 767px) {
+          margin-left: 80px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+        // margin-left: 480px;
+        @media (max-width: 991px) {
+          // margin-left: 350px;
+        }
+        @media (max-width: 767px) {
+          // margin-left: 150px;
+        }
+      }
+    }
+  }
+  .didContent {
+    // position: absolute;
+    // left: 65px;
+    // bottom: 80px;
+    margin-top: 8rem;
+    @media (max-width: 767px) {
+      // position: static;
+    }
+    p {
+      margin-bottom: 40px;
+      color: #fff;
+      line-height: 24px;
+      // max-width: 210px;
+    }
+  }
+}

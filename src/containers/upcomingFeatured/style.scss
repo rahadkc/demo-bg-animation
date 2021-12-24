@@ -1,0 +1,149 @@
+@import '../../assets/css/mixins.scss';
+
+.upcomingFeaturedArea {
+	padding: 130px 20px 140px;
+	@media (max-width:767px) {
+	    padding: 20px 20px 0px;
+        
+    }
+}
+.upcomingFeaturedItems{
+    max-width: 1080px;
+    margin: auto;
+}
+.paginationFeatured{
+	max-width: 1080px;
+	margin: auto;
+
+}
+.upcomingFeaturedWrap {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+    @media (max-width:767px) {
+        margin-bottom: 20px;
+    }
+	.upcomingFeaturedImg {
+		width: 395px;
+		margin-right: 20px;
+		img{
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+			border-radius: 20px 20px 0px 0px;
+		}
+		@media (max-width: 991px) {
+			width: 100%;
+			margin-right: 0;
+            margin-bottom: 0;
+			img {
+				width: 100%;
+			}
+		}
+		@media (max-width: 767px) {
+			img {
+                height: 260px;
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+			}
+		}
+	}
+	.upcomingFeaturedContent {
+		background: #ebfaff;
+		width: calc(100% - 415px);
+		padding: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+		@media (max-width: 767px) {
+			padding: 30px 20px;
+		}
+		span {
+			display: block;
+			font-family: $mainfontfamily;
+			font-weight: 700;
+			letter-spacing: 0.08em;
+			font-size: 12px;
+			line-height: 18px;
+			margin-bottom: 20px;
+		}
+		h2 {
+			font-weight: 700;
+			font-size: 48px;
+			font-family: $mainfontfamily;
+			line-height: 52px;
+			margin-bottom: 25px;
+			@media (max-width: 1300px) {
+				font-size: 30px;
+				line-height: 35px;
+			}
+			@media (max-width: 767px) {
+				font-size: 28px;
+				line-height: 30px;
+                margin-bottom: 15px;
+			}
+		}
+		p {
+			font-size: 16px;
+			line-height: 24px;
+            @media (max-width: 767px) {
+				font-size: 14px;
+				line-height: 21px;
+			}
+		}
+	}
+	.upcomingFeaturedLike {
+		display: flex;
+		align-items: center;
+		li {
+			margin-right: 10px;
+			&:last-child {
+				margin-right: 0;
+			}
+			button {
+				height: 60px;
+				width: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: none;
+				border-radius: 50%;
+				position: relative;
+				.value{
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					min-width: 20px;
+					min-height: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: #fff;
+					z-index: 1;
+					border-radius: 50%;
+					margin-bottom: 0;
+					font-size: 8px;
+					letter-spacing: 0.08em;
+					line-height: 10px;
+					font-weight: 700;
+				}
+                @media (max-width: 767px) {
+                    height: 40px;
+				    width: 40px;
+                    img{
+                        height: 16px;
+                    }
+                }
+				&.like {
+					background: #7adbd1;
+				}
+				&.unlike {
+					background: #e26262;
+				}
+			}
+		}
+	}
+}

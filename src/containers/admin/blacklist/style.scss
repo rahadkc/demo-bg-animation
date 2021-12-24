@@ -1,0 +1,421 @@
+@import '../../../assets/css/mixins.scss';
+
+.tableResponsive {
+  @media (max-width: 991px) {
+    overflow: hidden;
+    overflow-x: scroll;
+    .tableStyle {
+      width: 1000px;
+    }
+  }
+}
+
+.tableStyle {
+  width: 100%;
+  margin-bottom: 50px;
+
+  thead {
+    tr {
+      border-bottom: 10px solid #EBFAFF;
+
+      th {
+        height: 80px;
+        background: $textColor;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 400;
+        padding: 10px 20px;
+
+        &:first-child {
+          border-top-left-radius: 20px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 20px;
+        }
+      }
+    }
+
+  }
+
+  tbody {
+    tr {
+      border-bottom: 10px solid #EBFAFF;
+
+      &.bannedRow {
+        td {
+          color: #E26262;
+        }
+      }
+
+      .category {
+        display: inline-block;
+
+        .comma {
+          margin-right: 3px;
+          display: inline-block;
+        }
+
+        &:last-child {
+          .comma {
+            display: none;
+          }
+        }
+      }
+
+      td {
+        background: #fff;
+        height: 80px;
+        padding: 10px 20px;
+        font-size: 16px;
+        line-height: 20px;
+
+        .tablebtn {
+          font-weight: 700;
+          border-bottom: 1px solid #000;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.titleBoxWrap {
+  margin-bottom: 45px;
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+
+.adminSectionTitle {
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 46px;
+  font-family: $mainfontfamily;
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+
+}
+
+.adminBtn {
+  min-height: 45px;
+  min-width: 215px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  border: 2px solid $textColor;
+  background: $textColor;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  transition: all .4s ease-in-out 0s;
+  @media (max-width: 767px) {
+    font-size: 14px;
+    min-width: 110px;
+    padding: 5px 20px;
+    min-height: 40px;
+    &.mt-sm-15 {
+      margin-top: 15px;
+    }
+  }
+
+  &.adminBtnBlack {
+    background: #7ADBD1;
+    border-color: #7ADBD1;
+  }
+
+  &:hover {
+    background: $purple_1;
+    border-color: $purple_1;
+    color: #fff;
+  }
+}
+
+.searchList {
+  position: relative;
+  margin-bottom: 0;
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input {
+    max-width: 600px;
+    width: 600px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: $textColor;
+    font-size: 18px;
+    @media (max-width: 991px) {
+      width: 400px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      color: $textColor;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    border-bottom: 1px solid $purple_1;
+  }
+}
+
+.searchBoxWrap {
+  margin-bottom: 50px;
+}
+
+.shortingFilter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+.blackListModal {
+  &.modal-dialog {
+    min-width: 670px;
+    @media (max-width: 767px) {
+      min-width: 95%;
+      margin: 35px auto;
+    }
+  }
+
+  .signupCroseBtn {
+    position: absolute;
+    right: -5px;
+    cursor: pointer;
+    top: -45px;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    padding: 50px;
+    @media (max-width: 767px) {
+      padding: 30px 20px;
+    }
+  }
+}
+
+.blackListModalWrap {
+  h2 {
+    font-weight: 700;
+    font-size: 60px;
+    font-family: $mainfontfamily;
+    line-height: 66px;
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    span {
+      display: block;
+      color: #9BDCD5;
+    }
+  }
+
+  span {
+    &.label {
+      display: block;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid $textColor;
+    color: $textColor;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.modalBtns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 30px;
+
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      font-size: 21px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 5px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 18px;
+      }
+
+      &.success {
+        color: #7ADBD1;
+      }
+
+      &.error {
+        color: #E26262;
+      }
+    }
+  }
+}
+
+.noResultTable {
+  border: 1px dashed #A4ADFB;
+  border-radius: 20px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+
+  span {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  button {
+    max-width: 160px;
+    min-width: 160px;
+    min-height: 45px;
+    background: #fff;
+    border-radius: 50px;
+    color: $purple_1;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 auto;
+    border: none;
+  }
+}
+
+.reactSelect {
+  .reactSelectPrefix__control {
+    border: none;
+    border-bottom: 1px solid $purple_1;
+    border-radius: 0;
+  }
+
+  .reactSelectPrefix__control--is-focused {
+    box-shadow: none;
+
+  }
+
+  .css-b8ldur-Input {
+    .reactSelectPrefix__input {
+      input {
+        max-height: 35px;
+      }
+    }
+  }
+
+  .reactSelectPrefix__indicator-separator {
+    display: none;
+  }
+
+  .css-g1d714-ValueContainer {
+    padding: 0;
+  }
+
+  .css-tlfecz-indicatorContainer {
+    padding: 0 !important;
+    color: $textColor;
+  }
+
+  .css-1rhbuit-multiValue {
+    background: #7adbd1;
+    border-radius: 30px;
+    color: #fff;
+
+    .reactSelectPrefix__multi-value__label {
+      color: #fff;
+    }
+
+    .reactSelectPrefix__multi-value__remove {
+      transition: all 0.4s ease-in-out 0s;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.logoutAdmin {
+  min-width: 100px;
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $purple_1;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.todoInput {
+  position: relative;
+
+  .plusBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}

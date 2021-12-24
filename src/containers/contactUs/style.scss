@@ -1,0 +1,107 @@
+@import '../../assets/css/mixins.scss';
+
+.contactArea {
+	position: relative;
+	z-index: 1;
+	min-height: 100vh;
+	padding: 165px 20px 0px;
+    @media (max-width:991px) {
+        padding: 100px 20px 0px;
+    }
+    @media (max-width:767px) {
+        padding: 80px 20px 0px;
+    }
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 70%;
+		background: #ebfaff;
+		content: '';
+		z-index: -1;
+        @media (max-width:1300px) {
+            width: 100%;
+        }
+	}
+}
+.contactContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-left: auto;
+}
+.usefulFeatureForm{
+	.inputStyle{
+		label{
+			font-size: 16px;
+			line-height: 24px;
+		}
+		input{
+			border-radius: 0;
+			&::placeholder{
+				font-size: 16px;
+			}
+		}
+	}
+}
+.contactContent {
+	max-width: 675px;
+	padding-top: 60px;
+	@media (max-width:1600px) {
+		padding-top: 0;
+	}
+	@media (max-width: 1300px) {
+		max-width: 100%;
+		margin-bottom: 40px;
+		padding-top: 0;
+		.usefulFeatureForm {
+			max-width: 100%;
+		}
+	}
+
+	h2,
+	h1 {
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 66px;
+		font-family: $mainfontfamily;
+		margin-bottom: 30px;
+		@media (max-width: 1300px) {
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+	p {
+		margin-bottom: 50px;
+		font-size: 22px;
+		line-height: 32px;
+	}
+}
+.contactInfoList {
+	width: 535px;
+	display: flex;
+	flex-wrap: wrap;
+	@media (max-width: 1300px) {
+		width: 100%;
+	}
+	li {
+		width: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 265px;
+		letter-spacing: 0.07em;
+		font-weight: 700;
+		font-size: 60px;
+		font-family: $mainfontfamily;
+		text-transform: uppercase;
+		color: #fff;
+		@media (max-width: 767px) {
+			font-size: 30px;
+			line-height: 36px;
+			height: 150px;
+		}
+	}
+}

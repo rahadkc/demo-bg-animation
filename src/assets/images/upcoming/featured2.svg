@@ -1,0 +1,30 @@
+<svg width="395" height="516" viewBox="0 0 395 516" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 20C0 8.95428 8.9543 0 20 0H375C386.046 0 395 8.9543 395 20V515.4H0V20Z" fill="#777DEF"/>
+<circle cx="65" cy="418.21" r="25" fill="#EBFAFF"/>
+<path d="M75 418.21L60 426.87L60 409.55L75 418.21Z" fill="#071446"/>
+<circle cx="65" cy="278.21" r="25" fill="#EBFAFF"/>
+<path d="M54.5391 278.995L56.7941 276.099L62.8194 281.068L72.7208 270.21L75.4629 272.668L63.2035 286.21L54.5391 278.995Z" fill="white"/>
+<circle cx="65" cy="348.21" r="25" fill="#EBFAFF"/>
+<path d="M54.5391 348.995L56.7941 346.099L62.8194 351.068L72.7208 340.21L75.4629 342.668L63.2035 356.21L54.5391 348.995Z" fill="white"/>
+<rect x="110" y="255.71" width="224" height="10" fill="#EBFAFF"/>
+<rect x="110" y="275.71" width="192" height="5" fill="#EBFAFF"/>
+<rect x="110" y="285.71" width="202.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="295.71" width="186.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="325.71" width="224" height="10" fill="#EBFAFF"/>
+<rect x="110" y="345.71" width="192" height="5" fill="#EBFAFF"/>
+<rect x="110" y="355.71" width="202.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="365.71" width="186.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="395.71" width="224" height="10" fill="#EBFAFF"/>
+<rect x="110" y="415.71" width="192" height="5" fill="#EBFAFF"/>
+<rect x="110" y="425.71" width="202.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="435.71" width="186.5" height="5" fill="#EBFAFF"/>
+<circle cx="65" cy="488.21" r="25" fill="#EBFAFF"/>
+<path d="M75 488.21L60 496.87L60 479.55L75 488.21Z" fill="#071446"/>
+<rect x="110" y="465.71" width="224" height="10" fill="#EBFAFF"/>
+<rect x="110" y="485.71" width="192" height="5" fill="#EBFAFF"/>
+<rect x="110" y="495.71" width="202.5" height="5" fill="#EBFAFF"/>
+<rect x="110" y="505.71" width="186.5" height="5" fill="#EBFAFF"/>
+<path d="M40 50C40 44.4772 44.4772 40 50 40H345C350.523 40 355 44.4772 355 50V217.188H40V50Z" fill="#EBFAFF"/>
+<circle cx="197.5" cy="128.594" r="25" fill="white"/>
+<path d="M207.5 128.594L192.5 137.254L192.5 119.933L207.5 128.594Z" fill="#071446"/>
+</svg>

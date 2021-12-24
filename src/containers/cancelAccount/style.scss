@@ -1,0 +1,107 @@
+@import '../../assets/css/mixins.scss';
+
+.sadMessageArea {
+    padding: 190px 20px 170px;
+    @media (max-width: 1300px) {
+        padding: 170px 15px 100px;
+    }
+}
+.sadMessageWrap {
+    max-width: 843px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    padding: 100px 108px 72px 70px;
+    border-bottom: 10px solid #7adbd1;
+    @media (max-width: 991px) {
+        padding: 70px 80px 70px 50px;
+    }
+    @media (max-width: 767px) {
+        padding: 50px 25px;
+    }
+    .sadShape {
+        position: absolute;
+        right: -120px;
+        bottom: 82px;
+        z-index: -1;
+        @media (max-width: 767px) {
+            opacity: 0.8;
+            right: -50px;
+            height: 100px;
+        }
+    }
+    h1 {
+        max-width: 616px;
+        font-size: 70px;
+        line-height: 70px;
+        color: #fff;
+        width: 100%;
+        font-family: 'NeuzeitGro', sans-serif;
+        font-weight: 700;
+        margin-bottom: 34px;
+       
+        @media (max-width: 767px) {
+            font-size: 40px;
+            line-height: 45px;
+            margin-bottom: 30px;
+        }
+    }
+    p {
+        max-width: 616px;
+        font-size: 16px;
+        color: #fff;
+        line-height: 24px;
+        width: 100%;
+        margin-bottom: 257px;
+        font-weight: 400;
+        @media (max-width: 991px) {
+            margin-bottom: 80px;
+        }
+        @media (max-width: 767px) {
+            width: 90%;
+            margin-bottom: 40px;
+        }
+    }
+    &::before {
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        z-index: -1;
+    }
+    .sadAction {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 22px;
+        line-height: 28px;
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        strong {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out 0s;
+            @media (max-width: 767px) {
+                margin-left: 10px;
+            }
+            &:hover {
+                opacity: 0.9;
+            }
+            img {
+                margin-left: 15px;
+                @media (max-width: 767px) {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

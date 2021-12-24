@@ -1,0 +1,553 @@
+@import "../../assets/css/mixins.scss";
+
+.resourcesHeroArea {
+  position: relative;
+  padding: 220px 20px 0;
+
+  @media (max-width: 1300px) {
+    padding: 140px 20px 0;
+    margin-bottom: -100px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 20px 0;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #ebfaff;
+    width: 33.33%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+
+    @media (max-width: 1600px) {
+      width: 35%;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+      height: 275px;
+      width: 100%;
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  .scrollBtnResources {
+    z-index: 11;
+    bottom: 275px;
+    right: 490px;
+
+    @media (max-width: 1600px) {
+      bottom: 240px;
+      right: 450px;
+
+      .scrollText {
+        height: 100px;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      right: 320px;
+      bottom: 75px;
+    }
+
+    @media (max-width: 1100px) {
+      right: 30%;
+    }
+
+    @media (max-width: 991px) {
+      right: 350px;
+      bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+      right: 30px;
+      bottom: 330px;
+    }
+
+    @media (max-width: 400px) {
+      right: 30px;
+      bottom: 307px;
+    }
+
+    @media (max-width: 360px) {
+      right: 30px;
+      bottom: 280px;
+    }
+  }
+}
+
+.resourcesHeroContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.resourcesHeroContent {
+  max-width: 525px;
+  max-height: 300px;
+
+  @media (max-width: 1300px) {
+    max-height: unset;
+    max-width: 425px;
+    padding-top: 0;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 60px;
+    font-family: $mainfontfamily;
+    line-height: 66px;
+    margin-bottom: 50px;
+
+    @media (max-width: 1300px) {
+      font-size: 40px;
+      margin-bottom: 30px;
+      line-height: 46px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+      margin-bottom: 20px;
+      line-height: 35px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+
+.resourcesImage {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 810px;
+  z-index: 11;
+  position: relative;
+  margin-right: -20px;
+
+  @media (max-width: 1450px) {
+    max-width: 680px;
+  }
+
+  @media (max-width: 1300px) {
+    max-width: calc(100% - 450px);
+  }
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  .resourcesImg {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+
+    &:first-child {
+      @media (max-width: 767px) {
+        order: 2;
+
+        img {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    img {
+      border-radius: 20px 20px 0 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.resourcesArea {
+  max-width: 1224px;
+
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 130px 0 150px 20px;
+
+  @media (max-width: 1300px) {
+    padding: 100px 0 80px 20px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 20px 40px;
+  }
+
+  .filterTab {
+    display: flex;
+    border-bottom: 2px solid #dcf2ff;
+    margin-bottom: 30px;
+    padding-bottom: 17px;
+    justify-content: space-between;
+    align-items: center;
+    h6 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .filterArea {
+    border-bottom: 2px solid #dcf2ff;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+.resourcesCategory {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1.5px solid #615b5b;
+  padding-bottom: 50px;
+  margin-bottom: 60px;
+  max-width: 1500px;
+  margin-left: auto;
+
+  @media (max-width: 991px) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  li {
+    max-width: 120px;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    img {
+      height: 30px;
+      width: 30px;
+      object-fit: contain;
+    }
+
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: $mainfontfamily;
+      text-transform: uppercase;
+
+      &.active {
+        color: $purple_1;
+      }
+
+      span {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.no-data-resource {
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #dcf2ff;
+  padding: 90px 20px;
+  button {
+    align-self: center;
+    width: auto;
+  }
+  h5 {
+    font-size: 22px;
+    color: #071446;
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+}
+
+.resourcesImageResponsive {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    margin-left: -20px;
+  }
+
+  .resourcesImageTwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    img {
+      width: calc(50% - 10px);
+      border-radius: 20px 20px 20px 0;
+      height: 100%;
+
+      &:first-child {
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+
+  .resourcesImageOne {
+    img {
+      width: 100%;
+      border-radius: 0 20px 20px 0;
+      height: 170px;
+      object-fit: cover;
+    }
+  }
+}
+
+.btnStyle {
+  min-width: 150px;
+  min-height: 45px;
+  margin: 15px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $purple_1;
+  color: #fff;
+  font-weight: 700;
+  background: $purple_1;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out 0s;
+  &:hover {
+    background: transparent;
+    color: $purple_1;
+  }
+  &.btnSmall {
+    min-width: 110px;
+    min-height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  &.deleteBtn {
+    background: red;
+    border-color: red;
+  }
+}
+
+.resourcesItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.resourcesFilter {
+  display: flex;
+  gap: 20px;
+  li {
+    width: 25%;
+  }
+  label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: $mainfontfamily;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  select {
+    width: 100%;
+    height: 25px;
+    background: transparent;
+    border: none;
+    border-bottom: 1.5px solid $purple_1;
+    font-size: 16px;
+    color: $textColor;
+    transition: all 0.4s ease-in-out 0s;
+    appearance: none;
+    background: url(../../assets/images/icons/sort-arrow.svg) no-repeat calc(100% - 0px) center;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+
+    @media (max-width: 991px) {
+      width: 120px;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      border-bottom: 1px solid $purple_1;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $purple_1;
+    }
+  }
+  .chekbox {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .chekbox-wrapper {
+    height: 14px;
+    width: 14px;
+    position: relative;
+  }
+
+  .checboxinput {
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+    position: absolute;
+    opacity: 0;
+  }
+
+  .checkmark {
+    z-index: 30;
+    cursor: pointer;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    /* absolute top-0 bottom-0 left-0 right-0 */
+  }
+
+  .checkmark:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 2px;
+    height: 100%;
+    background-color: #dcf2ff;
+    transform: translate(-50%, -50%);
+  }
+
+  .checboxinput:checked ~ .checkmark:after {
+    background-color: #7adbd1;
+  }
+
+  .chekbox-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  // Media Screen for small devices
+  @media screen and (max-width: 620px) {
+    display: block;
+    li {
+      width: 100%;
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: $mainfontfamily;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+  }
+}
+.btnStyleMobile {
+  min-width: 100% !important;
+  min-height: 45px;
+  margin: 15px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $purple_1;
+  color: #fff;
+  font-weight: 700;
+  background: $purple_1;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out 0s;
+  &:hover {
+    background: transparent;
+    color: $purple_1;
+  }
+  &.btnSmall {
+    min-width: 110px;
+    min-height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  &.deleteBtn {
+    background: red;
+    border-color: red;
+  }
+}
+
+.resourcesItemsWrap {
+  width: 100%;
+}
+
+.paginationWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  li {
+    margin: 0 5px;
+
+    &.selected {
+      a {
+        color: #7adbd1;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      transition: all 0.4s ease-in-out 0s;
+      line-height: 28px;
+
+      &:hover {
+        color: $purple_1;
+      }
+
+      &.active {
+        color: #7adbd1;
+        font-weight: 700;
+      }
+    }
+  }
+}

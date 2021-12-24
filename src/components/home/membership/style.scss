@@ -1,0 +1,119 @@
+@import '../../../assets/css/mixins.scss';
+
+.membershipArea {
+	padding: 80px 20px 130px;
+	position: relative;
+	z-index: 1;
+	// background: #fff; //commented by Rahad
+    @media (max-width: 991px) {
+        padding: 80px 20px;
+    }
+    @media (max-width: 767px) {
+        padding: 50px 20px 20px;
+    }
+	.membershipBg {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 45%;
+		background: #ebfaff;
+		z-index: -1;
+		min-height: 100%;
+
+		@media (max-width: 991px) {
+			width: 100%;
+            min-height: 195px;
+		}
+	}
+}
+.membarshipContainer{
+    max-width: 1360px;
+    margin: auto;
+}
+.membarshipTitile {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 150px;
+	@media (max-width: 1300px) {
+		margin-bottom: 70px;
+	}
+	@media (max-width: 767px) {
+		padding-left: 0;
+		flex-wrap: wrap;
+        margin-bottom: 55px;
+	}
+	h2 {
+		font-family: $mainfontfamily;
+		font-size: 90px;
+		line-height: 100px;
+		font-weight: 700;
+		max-width: 790px;
+		margin-bottom: 0;
+		@media (max-width: 1300px) {
+			font-size: 50px;
+			line-height: 55px;
+			max-width: 60%;
+		}
+		@media (max-width: 991px) {
+			font-size: 40px;
+			line-height: 46px;
+			max-width: 60%;
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+	.joinBtn {
+		margin-top: 20px;
+	}
+}
+.memberItems {
+	display: flex;
+	flex-wrap: wrap;
+    max-width: 1085px;
+    margin: auto;
+	.memberItem {
+        min-width: 33.33%;
+		margin-bottom: 50px;
+		@media (max-width: 991px) {
+			width: 50%;
+            margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			width: 100%;
+            margin-bottom: 40px;
+		}
+		.memberWrap {
+            width: 260px;
+            @media (max-width:767px) {
+                width: 100%;
+            }
+			img {
+				margin-bottom: 30px;
+				width: 50px;
+				height: 50px;
+			}
+			h4 {
+				text-transform: uppercase;
+				font-family: $mainfontfamily;
+				font-size: 14px;
+				letter-spacing: 0.08em;
+				line-height: 20px;
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+			p {
+				margin-bottom: 0;
+				font-size: 16px;
+				line-height: 24px;
+                @media (max-width:767px) {
+                    font-size: 14px;
+				    line-height: 21px;
+                }
+			}
+		}
+	}
+}

@@ -1,0 +1,557 @@
+@import "../../assets/css/mixins.scss";
+
+.insuranceHeroArea {
+  max-height: 1050px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    .scrollBtn {
+      right: 60px;
+      bottom: 320px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .scrollBtn {
+      bottom: 295px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .scrollBtn {
+      bottom: 240px;
+      right: 40px;
+    }
+  }
+
+  .insuranceShape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    max-width: 40%;
+    width: 557px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      top: auto;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 53%;
+    }
+
+    @media (max-width: 400px) {
+      height: 50%;
+    }
+
+    @media (max-width: 350px) {
+      height: 45%;
+    }
+  }
+}
+
+.insuranceHeroContainer_wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .insuranceHeroContent_titles_wrapper {
+    padding: 70px 86px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1056px) {
+      padding: 70px 20px;
+    }
+
+    @media (max-width: 760px) {
+      padding: 30px 20px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+}
+
+.insuranceHeroContent {
+  box-sizing: border-box;
+  max-width: 809px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .insurance__viewplan {
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 700;
+    margin-top: 50px;
+
+    svg {
+      height: 20px;
+      margin-left: 0.75rem;
+    }
+  }
+
+  .category {
+    display: block;
+    font-family: $mainfontfamily;
+    font-weight: 700;
+    margin-bottom: 36px;
+    font-size: 12px;
+    text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  h1 {
+    font-family: $mainfontfamily;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 66px;
+    margin-bottom: 0 !important;
+
+    @media (max-width: 1050px) {
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+      line-height: 34px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    margin-top: 40px;
+
+    @media (max-width: 1050px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @media (max-width: 767px) {
+      margin: 20px 0;
+    }
+  }
+}
+
+.insuranceHeroImages {
+  max-width: 40%;
+  width: 557px;
+  display: flex;
+  padding: 180px 20px;
+  justify-content: center;
+
+  .insuranceHeroImages_wrapper {
+    width: 557px;
+    overflow: hidden;
+
+    div {
+      max-height: 690px;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        min-width: 100%;
+        height: 100%;
+        object-fit: fill;
+        border-radius: 15px 15px 0 0;
+      }
+    }
+  }
+
+  @media (max-width: 1056px) {
+    padding: 120px 20px;
+  }
+
+  @media (max-width: 760px) {
+    padding: 0 20px 20px;
+    max-width: 75%;
+    width: 100%;
+
+    .insuranceHeroImages_wrapper {
+      width: 100%;
+
+      div {
+        object-position: center;
+        max-height: 400px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.insuranceAboutArea {
+  overflow: hidden;
+  padding: 150px 20px;
+
+  .aboutSub {
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 100px 20px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 50px 20px 0;
+  }
+
+  .insuranceAboutImg {
+    margin-left: -75px;
+    width: 690px;
+
+    @media (max-width: 1300px) {
+      width: 400px;
+    }
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    img {
+      border-radius: 0 20px 20px 0;
+      height: 740px;
+      object-fit: cover;
+      width: 100%;
+
+      @media (max-width: 767px) {
+        border-radius: 20px 20px 0 0;
+        height: unset;
+      }
+    }
+  }
+
+  .insuranceAboutContent {
+    width: calc(100% - 615px);
+    padding-left: 160px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 1600px) {
+      padding-left: 100px;
+    }
+
+    @media (max-width: 1300px) {
+      width: calc(100% - 325px);
+      padding-left: 55px;
+    }
+
+    @media (max-width: 991px) {
+      width: 100%;
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-family: $mainfontfamily;
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 99px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-left: -275px;
+      margin-bottom: 45px;
+
+      @media (max-width: 1300px) {
+        font-size: 50px;
+        line-height: 59px;
+        margin-bottom: 20px;
+        margin-left: -135px;
+      }
+
+      @media (max-width: 991px) {
+        margin-left: 0;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
+
+    strong {
+      font-size: 22px;
+      line-height: 33px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 25px;
+      display: block;
+
+      @media (max-width: 1300px) {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #fff;
+      margin-bottom: 25px;
+
+      @media (max-width: 1300px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.insuranceAboutContainer {
+  max-width: 1520px;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.insuranceFeaturesArea {
+  position: relative;
+  z-index: 1;
+  padding: 150px 20px 100px !important;
+  overflow: hidden;
+
+  @media (max-width: 1300px) {
+    padding: 100px 20px 50px !important;
+  }
+
+  @media (max-width: 767px) {
+    padding: 50px 20px 0 !important;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 65%;
+    height: 100%;
+    z-index: -1;
+    background: #ebfaff;
+    content: "";
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      top: auto;
+      bottom: 0;
+      height: 250px;
+    }
+  }
+}
+
+.insuranceFeaturesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -75px;
+  max-width: 1520px;
+  justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    margin-left: 0;
+  }
+
+  &.insuranceContain {
+    @media (max-width: 767px) {
+      flex-wrap: wrap-reverse !important;
+    }
+  }
+}
+
+.insuranceFeaturesImages {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 690px;
+  padding-right: 50px;
+
+  @media (max-width: 1600px) {
+    max-width: 630px;
+  }
+
+  @media (max-width: 1300px) {
+    max-width: 50%;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 991px) {
+    max-width: 100%;
+    margin-bottom: 40px;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
+  li {
+    padding: 10px 0;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
+
+    img {
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      width: 100%;
+    }
+
+    &:first-child {
+      width: 60%;
+
+      @media (max-width: 767px) {
+        width: 57%;
+      }
+
+      img {
+        &:first-child {
+          margin-bottom: 20px;
+
+          @media (max-width: 767px) {
+            margin-bottom: 23px;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      width: 40%;
+      padding-left: 20px;
+
+      @media (max-width: 767px) {
+        width: 43%;
+      }
+    }
+  }
+}
+
+.insuranceFeaturesWrap {
+  width: 670px;
+
+  @media (max-width: 1600px) {
+    width: 630px;
+  }
+
+  @media (max-width: 1300px) {
+    width: 50%;
+    padding-left: 30px;
+  }
+
+  @media (max-width: 991px) {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.insuranceFeaturesWrapTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
+  border-bottom: 1.5px solid #a4aac1;
+
+  @media (max-width: 767px) {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 48px;
+    font-family: $mainfontfamily;
+    line-height: 52px;
+    margin-bottom: 0;
+
+    @media (max-width: 767px) {
+      font-size: 28px;
+      line-height: 30px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.insuranceFeaturesItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    width: 255px;
+    margin-bottom: 30px;
+
+    @media (max-width: 1300px) {
+      width: calc(50% - 20px);
+      margin-right: 20px;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    h4 {
+      font-size: 14px;
+      line-height: 21px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 0;
+
+      @media (max-width: 1300px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+@import '../../assets/css/mixins.scss';
+
+.whyArea {
+    padding: 0px 20px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 1300px) {
+        padding: 150px 10px 100px 20px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 150px 20px 100px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 50px 20px 50px 20px;
+
+        .scrollBtn {
+            right: 60px;
+            bottom: 320px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .scrollBtn {
+            bottom: 295px;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .scrollBtn {
+            bottom: 240px;
+            right: 40px;
+        }
+    }
+
+    .whyShape {
+        padding: 100px 0px;
+        width: 692px;
+        background-color: #ebfaff;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 991px) {
+            padding: 0px 0px;
+            background-color: white;
+        }
+
+        @media (max-width: 767px) {
+            top: auto;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 53%;
+        }
+
+        @media (max-width: 400px) {
+            height: 50%;
+        }
+
+        @media (max-width: 350px) {
+            height: 45%;
+        }
+    }
+}
+
+.whyContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-left: auto;
+
+    @media (max-width: 1600px) {
+        max-width: 1400px;
+    }
+
+    @media (max-width: 760px) {
+        gap: 30px;
+        flex-direction: column;
+    }
+}
+.whyContent {
+    padding: 100px 0px 100px 86px;
+    box-sizing: border-box;
+    max-width: 690px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2rem;
+
+    @media (max-width: 1600px) {
+        padding-right: 80px;
+    }
+
+    @media (max-width: 1300px) {
+        max-width: 450px;
+        padding-right: 30px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 0px 0px;
+        margin-left: 0;
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    h1 {
+        font-family: $mainfontfamily;
+        font-weight: 700;
+        font-size: 60px;
+
+        @media (max-width: 1300px) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 33px;
+        margin-bottom: 40px;
+        font-weight: 400;
+        width: 80%;
+        margin-top: 1.1rem;
+
+        @media (max-width: 1300px) {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .bottomimages {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            margin: 0.6rem 3rem 0;
+        }
+    }
+
+    .ccLogo {
+        width: 77px;
+        height: 78px;
+    }
+
+    .ewLogo {
+        width: 169.11px;
+        height: 76px;
+    }
+}
+
+.whyRight {
+    width: 330px;
+
+    .whyVideos {
+        @media (max-width: 767px) {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        li {
+            &:first-child {
+                @media (max-width: 767px) {
+                    margin-bottom: 0;
+                    margin-right: 0;
+                }
+
+                .whyvideo {
+                    overflow: hidden;
+
+                    .videoBg {
+                        height: 60%;
+                    }
+                }
+            }
+
+            .whyvideo {
+                line-height: 0;
+                position: relative;
+                overflow: hidden;
+
+                .videoBg {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.6;
+                }
+
+                .videobarBg {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 9px;
+                    left: 0;
+                    z-index: 11;
+                }
+
+                video,
+                img {
+                    width: calc(100% + 2px);
+                    border-radius: 20px 20px 0 0;
+                }
+            }
+
+            &:last-child {
+                @media (max-width: 767px) {
+                    margin-left: 0;
+                }
+
+                .whyvideo {
+                    .videoBg {
+                        height: 70%;
+                    }
+
+                    &:first-child {
+                        margin-bottom: 30px;
+                        height: auto;
+
+                        @media (max-width: 1300px) {
+                            margin-bottom: 13px;
+                        }
+
+                        .videoBg {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 0.85rem;
+        font-weight: 400;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+        margin: 0;
+
+        .videoBg,
+        img {
+            object-fit: cover;
+            max-height: 500px;
+        }
+    }
+}

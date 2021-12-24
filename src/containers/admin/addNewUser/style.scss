@@ -1,0 +1,20 @@
+@import '../../../assets/css/mixins.scss';
+
+.saveBtn{
+    width: 100%;
+    background: #7ADBD1;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    margin-top: 30px;
+    &:hover{
+        background: $purple_1;
+        border-color: $purple_1;
+        color: #fff;
+    }
+}

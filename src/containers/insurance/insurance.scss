@@ -1,0 +1,284 @@
+.insurancetype {
+  background-image: url('./gredient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .insurancetype__container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 129px 20px;
+
+    .insurancetype_title_wrapper {
+      max-width: 920px;
+      padding: 0 20px;
+      margin: auto;
+
+      h1 {
+        color: white;
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 50px;
+        line-height: 66px;
+        text-shadow: 0 0 2px white;
+      }
+
+      b,
+      p {
+        text-align: center;
+        display: block;
+      }
+
+      b {
+        color: #071446;
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 33px;
+      }
+
+      p {
+        color: #071446;
+        margin-bottom: 50px;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+      }
+    }
+
+    .insurancetype__viewplan {
+      background: transparent;
+      border: none;
+      outline: none;
+      display: flex;
+      align-items: center;
+      margin: 50px 0;
+      color: #071446;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 33px;
+      justify-content: center;
+
+      svg {
+        height: 17px;
+        margin-left: 0.75rem;
+      }
+    }
+
+    .insurancetype__info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      .allinsurance__info_box {
+        background: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom: 10px solid #071446;
+        height: 267px;
+        width: 257px;
+
+        img {
+          width: 55px;
+          height: 55px;
+          object-fit: contain;
+        }
+
+        p {
+          margin-top: 21px;
+          line-height: 33px;
+          color: #071446;
+          font-size: 22px;
+          font-weight: 400;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .insurancetype {
+    .insurancetype__container {
+      padding: 180px 20px;
+
+      h1 {
+        font-size: 50px !important;
+        margin-bottom: 80px !important;
+        line-height: 52px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .insurancetype {
+    .insurancetype__container {
+      max-width: 100%;
+      padding: 100px 20px;
+
+      h1 {
+        font-size: 42px !important;
+        margin-bottom: 60px !important;
+        line-height: 44px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .insurancetype {
+    .insurancetype__container {
+      .insurancetype__viewplan {
+        margin: 40px 0 !important;
+        font-size: 18px !important;
+      }
+
+      .insurancetype_title_wrapper {
+        padding: 0 !important;
+      }
+
+      padding: 70px 20px;
+
+      h1 {
+        padding: 0;
+        width: 100%;
+        font-size: 30px !important;
+        margin-bottom: 30px !important;
+        line-height: 35px !important;
+      }
+
+      p {
+        margin-bottom: 0 !important;
+        font-size: 18px !important;
+        margin-top: 0 !important;
+      }
+
+      b {
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .insurancetype__info {
+        .allinsurance__info_box {
+          width: 200px;
+          height: 200px;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+
+          p {
+            margin-top: 30px;
+            line-height: 20px;
+            color: #071446;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.satisfaction_guaranteed {
+  .satisfaction_guaranteed_header {
+    text-align: center;
+    max-width: 818px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 48px;
+      line-height: 52px;
+      margin-bottom: 40px;
+      font-weight: bold;
+      color: #071446;
+      margin-top: 45px;
+    }
+
+    p {
+      color: #071446;
+      font-size: 22px;
+      line-height: 150%;
+      margin-bottom: 40px;
+      font-weight: normal;
+    }
+
+    div {
+      margin: 0 auto;
+      display: inline-block;
+
+      a {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #000000de;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+          height: 22px;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .satisfaction_slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .satisfaction_guaranteed_header {
+      padding: 80px 20px;
+
+      h2 {
+        margin-top: 35px;
+        font-size: 42px !important;
+        margin-bottom: 35px !important;
+        line-height: 44px !important;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 760px) {
+    .satisfaction_guaranteed_header {
+      padding: 60px 20px 40px 20px;
+
+      h2 {
+        margin-top: 30px;
+        font-size: 35px !important;
+        margin-bottom: 30px !important;
+        line-height: 37px !important;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

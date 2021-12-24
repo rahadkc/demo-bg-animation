@@ -1,0 +1,52 @@
+name: deploy-staging-app
+
+on:
+  push:
+    branches:
+      - stage
+    
+jobs:
+  deploy-staging:
+    runs-on: ubuntu-latest
+    
+    env:
+      REACT_APP_BASE_URL: 'https://api.stage.brethren.io/api/'
+      REACT_APP_COMMUNITY_URL: 'https://ccdevcommunity.brethren.io/'
+    
+    strategy:
+      matrix:
+        node-version: [14.x]
+        
+    steps:
+      - uses: actions/checkout@master
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+          
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Build Application
+        run: CI='' npm run build
+        
+      - uses: jakejarvis/s3-sync-action@master
+        name: Upload App to S3 Bucket (Staging)
+        with:
+          args: --follow-symlinks --delete --cache-control max-age=86400000
+        env:
+          AWS_S3_BUCKET: 'ccstage.brethren.io'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'us-east-2'
+          SOURCE_DIR: 'build'
+          
+      - name: Create CloudFront Cache Invalidation
+        uses: chetan/invalidate-cloudfront-action@master
+        env:
+          DISTRIBUTION: 'E2Q5Q14GBRTJTZ'
+          PATHS: '/*'
+          AWS_REGION: 'us-east-2'
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -1,0 +1,161 @@
+@import '../../../assets/css/mixins.scss';
+
+.aboutArea {
+	position: relative;
+	z-index: 1;
+	min-height: 1050px;
+	padding: 160px 20px;
+	
+	@media (max-width: 1600px) {
+		padding: 120px 20px;
+		min-height: unset;
+	}
+	@media (max-width: 767px) {
+		padding: 40px 20px 70px;
+		min-height: unset;
+	}
+    .AboutContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1360px;
+        margin: auto;
+    }
+	.aboutBg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		img {
+			max-width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.aboutTitle {
+		position: absolute;
+		bottom: -84px;
+		font-size: 160px;
+		font-family: $mainfontfamily;
+		font-weight: 700;
+		line-height: 175px;
+		right: 0;
+		z-index: 101;
+		margin-bottom: 0;
+		&.marquee-container{
+			overflow-y: hidden;
+			.overlay{
+				display: none;
+			}
+		}
+		@media (max-width: 1300px) {
+			font-size: 90px;
+			line-height: 95px;
+			bottom: -40px;
+		}
+		@media (max-width: 767px) {
+			font-size: 70px;
+			line-height: 75px;
+			bottom: -33px;
+           span{
+               display: none;
+           }
+		}
+		@media (max-width: 370px) {
+			font-size: 60px;
+			line-height: 65px;
+		}
+	}
+}
+.aboutImg {
+	position: relative;
+	width: 535px;
+	@media (max-width: 1300px) {
+		width: 380px;
+		img {
+			width: 100%;
+		}
+	}
+	@media (max-width: 991px) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	@media (max-width: 991px) {
+		margin-bottom: 0px;
+        img{
+            height: 310px;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover;
+        }
+	}
+	.hoverImage {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 1s ease-in-out 0s;
+		width: 0px;
+		border-radius: 50%;
+		height: 0px;
+	}
+}
+.aboutContent {
+	min-height: 100%;
+	background: #fff;
+	width: calc(100% - 555px);
+	padding: 85px 130px;
+	display: flex;
+    align-items: center;
+
+	@media (max-width: 1300px) {
+		width: calc(100% - 400px);
+		padding: 30px;
+	}
+	@media (max-width: 991px) {
+		width: 100%;
+	}
+	@media (max-width: 767px) {
+		padding: 20px 15px;
+	}
+	h2 {
+		font-size: 46px;
+		line-height: 50px;
+		margin-bottom: 30px;
+		font-family: $mainfontfamily;
+		font-weight: 700;
+		@media (max-width: 1300px) {
+			font-size: 30px;
+			line-height: 35px;
+			margin-bottom: 20px;
+		}
+		@media (max-width: 767px) {
+			font-size: 28px;
+			line-height: 30px;
+		}
+	}
+	.aboutSub {
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 30px;
+		font-weight: 400;
+		@media (max-width: 1300px) {
+			font-size: 18px;
+			line-height: 23px;
+			margin-bottom: 25px;
+		}
+	}
+	.text {
+		font-size: 16px;
+		margin-bottom: 30px;
+		line-height: 24px;
+		font-weight: 400;
+		@media (max-width: 1300px) {
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 20px;
+		}
+	}
+}

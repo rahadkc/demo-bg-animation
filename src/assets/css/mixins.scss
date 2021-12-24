@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'NeuzeitGro';
+	src: url('../fonts//NeuzeitGro-Lig.ttf') format('truetype'),
+		url('../fonts/NeuzeitGro-Lig.woff') format('woff'),
+		url('../fonts/NeuzeitGro-Lig.woff2') format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeuzeitGro';
+	src: url('../fonts/NeuzeitGro-Reg.ttf') format('truetype'),
+		url('../fonts/NeuzeitGro-Reg.woff') format('woff'),
+		url('../fonts/NeuzeitGro-Reg.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeuzeitGro';
+	src: url('../fonts/NeuzeitGro-Bol.ttf') format('truetype'),
+		url('../fonts/NeuzeitGro-Bol.woff') format('woff'),
+		url('../fonts/NeuzeitGro-Bol.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+$mainfontfamily: 'NeuzeitGro';
+$textColor: #071446;
+$purple_1: #777def;

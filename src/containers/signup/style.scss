@@ -1,0 +1,33 @@
+@import '../../assets/css/mixins.scss';
+.signupArea{
+    position: relative;
+    .signupProgressBar{
+        position: absolute;
+        left: 0;
+        background: #fff;
+        height: 10px;
+        transition: all .4s ease-in-out 0s;
+        bottom: 0;
+        transition: all 1s ease-in-out 0s;
+        transition-delay: .5s;
+        @media (max-width:991px) {
+            height: 5px;
+        }
+    }
+}
+.accountHelperText{
+    position: absolute;
+    left: 35px;
+    bottom: 35px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    font-size: 14px;
+	font-family: $mainfontfamily;
+    color: #fff;
+    @media (max-width:991px) {
+        left: 15px;
+        bottom: 25px;
+    }
+}

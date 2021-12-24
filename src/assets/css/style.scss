@@ -1,0 +1,372 @@
+@import "./mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $mainfontfamily;
+  font-weight: 500;
+  color: $textColor;
+  background: #fff;
+  margin: auto;
+  scroll-behavior: smooth;
+  @media (max-width: 767px) {
+    overflow-x: hidden;
+  }
+  .publicBody {
+    padding-left: 75px;
+    position: relative;
+
+    @media (max-width: 1023px) {
+      padding-left: 0;
+    }
+  }
+
+  a {
+    transition: all 0.4s ease-in-out 0s;
+    color: $textColor;
+    text-decoration: none;
+    &:hover {
+      color: $purple_1;
+      text-decoration: none;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: $mainfontfamily;
+    font-weight: 700;
+    color: $textColor;
+  }
+  h4.all-caps {
+    letter-spacing: 1px;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 110%;
+}
+.btnStyle {
+  min-width: 150px;
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $purple_1;
+  color: #fff;
+  font-weight: 700;
+  background: $purple_1;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out 0s;
+  &:hover {
+    background: transparent;
+    color: $purple_1;
+  }
+  &.btnSmall {
+    min-width: 110px;
+    min-height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  &.deleteBtn {
+    background: red;
+    border-color: red;
+  }
+}
+.inputStyle {
+  margin-bottom: 30px;
+  &.inputStyleBlack {
+    input,
+    select,
+    textarea {
+      color: $textColor;
+      border-color: $textColor;
+    }
+  }
+  label {
+    display: block;
+    font-family: $mainfontfamily;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+  .inputWithText {
+    position: relative;
+    margin-bottom: 0;
+    .updatePassword {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      color: #a4aac1;
+      cursor: pointer;
+      font-family: $mainfontfamily;
+      font-weight: 500;
+    }
+  }
+  input,
+  select,
+  textarea {
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $purple_1;
+    color: $textColor;
+    transition: all 0.4s ease-in-out 0s;
+    font-size: 16px;
+    font-family: $mainfontfamily;
+    font-weight: 500;
+    background: transparent;
+    border-radius: 0;
+    &[readonly] {
+      cursor: text;
+    }
+    &.error {
+      border-color: #b00020;
+      &::placeholder {
+        color: #b00020;
+      }
+    }
+    &:focus {
+      outline: none;
+      border-color: #a4aac1;
+    }
+    &::placeholder {
+      opacity: 1;
+      font-size: 22px;
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  select {
+    appearance: none;
+    background: transparent url(../../assets/images/icons/arrow.svg) no-repeat
+      calc(100% - 0px) center;
+  }
+  .content {
+    min-height: 100px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $textColor;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+}
+.errorMessage {
+  background: rgba(176, 0, 32, 0.1);
+  color: #b00020;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 3px 10px;
+  margin-top: 1px;
+}
+
+.dropzoneStyle {
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px dashed $purple_1;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 20px;
+  p {
+    margin-bottom: 15px;
+  }
+  button {
+    min-width: 110px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #7adbd1;
+    border-radius: 20px;
+    border: 2px solid #7adbd1;
+    transition: all 0.4s ease-in-out 0s;
+    color: #fff;
+    font-family: $mainfontfamily;
+    font-weight: 700;
+    &:hover {
+      background: transparent;
+      color: #7adbd1;
+    }
+  }
+}
+.thumbImages {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    display: inline-flex;
+    border-radius: 2px;
+    border: 1px solid #eaeaea;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 100px;
+    height: 70px;
+    padding: 4px;
+    justify-content: center;
+    img {
+      object-fit: contain;
+    }
+  }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 35px;
+  margin-top: 15px;
+  &.switchVideo {
+    margin-left: 50px;
+    .slider {
+      .yes {
+        margin-left: -50px;
+      }
+
+      .no {
+        margin-right: -50px;
+      }
+    }
+  }
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ebfaff;
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  .active {
+    color: $textColor;
+  }
+  span {
+    transition: 0.4s;
+    color: #A4AAC1;
+  }
+  .yes {
+    margin-left: -35px;
+  }
+  .no {
+    margin-right: -35px;
+  }
+}
+
+.switchBlack {
+  .slider:before {
+    background: $textColor;
+  }
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  right: 4px;
+  bottom: 4px;
+  background: $textColor;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: #ebfaff;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(-26px);
+  -ms-transform: translateX(-26px);
+  transform: translateX(-26px);
+  background: #7adbd1;
+}
+.multiSelect {
+  .selectPrefix__control {
+    border: none;
+    border-bottom: 1px solid $purple_1;
+    border-radius: 0px;
+  }
+  .selectPrefix__control--is-focused {
+    box-shadow: none;
+  }
+  .css-b8ldur-Input {
+    .selectPrefix__input {
+      input {
+        max-height: 35px;
+      }
+    }
+  }
+  .css-1rhbuit-multiValue {
+    background: #7adbd1;
+    border-radius: 30px;
+    color: #fff;
+    .selectPrefix__multi-value__label {
+      color: #fff;
+    }
+    .selectPrefix__multi-value__remove {
+      transition: all 0.4s ease-in-out 0s;
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+.fw-normal {
+  font-weight: normal !important;
+}
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.mainContainer {
+  max-width: 1680px;
+  margin: auto;
+}
+.deleteIcon {
+  padding: 4px;
+}
+
+.insuranceActionBtns li a.view-items {
+  color: #071446 !important;
+  margin-right: 8px;
+  text-align: center;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  //display: none;
+  //-webkit-appearance: none;
+  opacity: 0;
+}
